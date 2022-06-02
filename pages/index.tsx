@@ -1,10 +1,11 @@
 import type { NextPage } from 'next'
+import CharacterList from '../components/CharacterList'
 
 const Home: NextPage = () => {
   return (
-    <div>
-      Hai Stas!
-    </div>
+    <>
+      <CharacterList />
+    </>
   )
 }
 

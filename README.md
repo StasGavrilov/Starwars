@@ -1,6 +1,6 @@
 Task 1:
-* List all Characters
-* Show Character name
+* List all Characters ✔
+* Show Character name ✔
 
 Task 2:
 * Implement materialUI on Character list component
@@ -20,3 +20,5 @@ Task 4:
     - make all the cards the same height
 * Add search
 * Add favorites button that will save the character in localStorage
+
+(✔ X ?)
