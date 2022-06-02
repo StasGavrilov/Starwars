@@ -1,6 +1,7 @@
 Task 1:
 * List all Characters ✔
 * Show Character name ✔
+* Add loading components ✔
 
 Task 2:
 * Implement materialUI on Character list component
