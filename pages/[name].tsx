@@ -1,9 +1,31 @@
-const [name] = () => {
+import React, { useEffect, useState } from 'react'
+import { useRouter } from 'next/router';
+import axios from 'axios';
+
+import { ICharacter } from '../interfaces/characters';
+
+const currentCharacterName = 'https://swapi.dev/api/people/?search='
+
+const CharacterPage = () => {
+    const router = useRouter()
+    const [character, setCharacter] = useState({})
+
+    useEffect(() => {
+        if (router.isReady) {
+            axios.get(currentCharacterName + router.query.name)
+                .then(response => {
+                    setCharacter(response.data.results[0])
+                })
+        }
+    }, [router.isReady])
+
+    console.log(character)
+
     return (
         <div>
-            dd
+            hello {character.name}
         </div>
     )
 }
 
-export default [name]
+export default CharacterPage

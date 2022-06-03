@@ -3,13 +3,10 @@ import React, { useEffect, useState } from 'react'
 import { List, ListItem, ListItemButton } from '@mui/material'
 import Link from 'next/link'
 
+import { ICharacter } from '../interfaces/characters'
 import Loading from './Loading'
 
 const DATA_BASE = 'https://swapi.dev/api/people/'
-
-interface ICharacter {
-    name: string
-}
 
 const CharacterList = () => {
     const [characters, setCharacters] = useState<ICharacter[] | []>([])
