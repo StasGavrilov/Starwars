@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router';
 import axios from 'axios';
 
-import { ICharacter } from '../interfaces/characters';
+import { ICharacter } from '../src/interfaces/characters';
 
 const currentCharacterName = 'https://swapi.dev/api/people/?search='
 
 const CharacterPage = () => {
     const router = useRouter()
-    const [character, setCharacter] = useState({})
+    const [character, setCharacter] = useState<any>({})
 
     useEffect(() => {
         if (router.isReady) {
