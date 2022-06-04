@@ -18,9 +18,8 @@ const CharacterList = () => {
     }, [])
 
     const decode = (str: string) => {
-        return decodeURIComponent(str)
-        // console.log(decode('hello%20stas'))
-    } //TODO:
+        return str.replace("%20", "-")
+    }
 
     return (
         <>
