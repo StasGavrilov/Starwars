@@ -4,5 +4,6 @@ TODO:
 * CharacterInfo.tsx, line 6 :any
 * can't check if I got data from character prop in Planet.tsx
 * failing to fetch the right vehicle api
+* can't remove the empty cards
 
 DONE:

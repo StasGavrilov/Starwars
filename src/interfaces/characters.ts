@@ -6,4 +6,5 @@ export interface ICharacter {
     skin: string
     birth: string
     gender: string
+    vehicles: string[]
 }
