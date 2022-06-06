@@ -2,14 +2,19 @@ import React, { useEffect, useState } from 'react';
 import { Card, CardContent, Typography } from '@mui/material'
 import axios from 'axios';
 
-import { Starship } from '../interfaces/starship';
+import { IStarship } from '../interfaces/starship';
+import { ICharacter } from '../interfaces/characters';
 
-const Starships = ({ character }: any) => {
-    const [starship, setStarship] = useState<any>({})
+export interface IStarshipProps {
+    character: ICharacter
+}
+
+const Starships = ({ character }: IStarshipProps) => {
+    const [starship, setStarship] = useState<IStarship | null>(null)
 
     useEffect(() => {
         if (character.starships && character.starships.length > 0) {
-            axios.get(starship).then(response => {
+            axios.get(character.starships[0]).then(response => {
                 setStarship(response.data)
             })
         }

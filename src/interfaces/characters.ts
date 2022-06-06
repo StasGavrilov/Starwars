@@ -7,4 +7,5 @@ export interface ICharacter {
     birth: string
     gender: string
     vehicles: string[]
+    starships: string[]
 }

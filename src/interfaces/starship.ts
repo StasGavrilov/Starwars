@@ -1,4 +1,4 @@
-export interface Starship {
+export interface IStarship {
     name: string
     model: string
     created: string
@@ -7,4 +7,5 @@ export interface Starship {
     crew: string
     passengers: string
     vehicle_class: string
+    starship_class: string
 }
